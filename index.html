@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>MRC Impressão 3D</title>
+</head>
+<body>
+    
+    <div id="app">
+        <div class="container">
+           <header>
+                <a v-for="link in links" :class="link.acessou ? 'link_ativo' : '' " @click="acessarLink(link)">{{ link.name }}</a>
+           </header>
+           <div class="main" v-if="acessei.name == 'Inicio'" style="color: #fff;">
+               <h1>Ínicio</h1>
+               <p>“A Impressão 3D ou Prototipagem Rápida é uma tecnologia de fabricação aditiva que está revolucionando o mundo. Aqui, transformamos seu projeto em realidade. Nosso time está preparado para solidificar sua ideia.”</p>
+               <div class="video_container">
+                   <div class="overlay"></div>
+                   <video src="./video/01.mp4" autoplay="true" loop="true" muted="true"></video>
+               </div>
+           </div>
+           <div class="main" v-if="acessei.name == 'Contato'">
+               <h1 >Contato</h1>
+               <p>Algumas redes sociais para manter contato conosco</p>
+               <a href="http://facebook.com/projetista.marchi" class="button is-link is-hovered" target="_blank">
+                    <span class="icon">
+                            <i class="fab fa-facebook"></i>
+                    </span>
+                </a>
+                <a href="https://www.instagram.com/mrc_impressao3d/" target="_blank" class="button is-link is-hovered">
+                        <span class="icon">
+                                <i class="fab fa-instagram"></i>
+                        </span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/js/bulma-carousel.min.js"></script>
+    <script>
+    bulmaCarousel.attach('#carousel-demo', {
+        slidesToScroll: 1,
+        slidesToShow: 4
+    });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="./scripts/app.js"></script>
+</body>
+</html>
