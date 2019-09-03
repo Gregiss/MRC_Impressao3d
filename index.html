@@ -51,7 +51,7 @@
                         <h1 class="okay">Produtos</h1>
                         <div class="product" v-for="produto in produtos">
                             <h1>{{ produto.name }}</h1>
-                            <h1 class="price">Preço : {{ produto.preco }}</h1>
+                            <h1 class="price">Preço : {{ produto.preco }} reais</h1>
                             <img @click="viewImage(produto)" :src="produto.img" alt="">
                         </div>
                     </div>
@@ -59,7 +59,7 @@
                     <div class="view" v-if="view">
                             <button class="close" @click="close"><i class="far fa-window-close"></i></button>
                             <h1>{{ vendo.name }}</h1>
-                            <h1 class="price">Preço : {{ vendo.preco }}</h1>
+                            <h1 class="price">Preço : {{ vendo.preco }} reais</h1>
                             <img :src="vendo.img" alt="">
                     </div>
                     
