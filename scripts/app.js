@@ -3,7 +3,7 @@ var app = new Vue({
     data: {
         links: [{"name" : "Inicio", "ativo" : true, "acessou": true}
         ,{"name" : "Contato", "ativo" : false, "acessou": false},
-        {"name" : "Criar 3D", "ativo" : false, "acessou": false}
+        {"name" : "Loja", "ativo" : false, "acessou": false}
         ],
         acessei: {"name" : "Inicio", "ativo" : true, "acessou": true},
         produtos: [
