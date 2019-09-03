@@ -41,6 +41,10 @@ body,html{
    background-color: transparent;
 }
 
+body,html{
+    background: #151515;
+}
+
 header{
     background: #3F51B5;
     padding: 10px;
@@ -49,6 +53,7 @@ header{
     top: -1px;
     left: 0px;
     z-index: 10000;
+    overflow: hidden;
 }
 
 a{
@@ -63,6 +68,8 @@ header a{
     font-size: 2em;
     margin-left: 30px;
     transition: 0.4s ease-in-out;
+    position: relative;
+    left: -35px;
 }
 
 .link_ativo{
@@ -107,6 +114,10 @@ h1{
 
 .main{
     animation: main_animate 1s ease-out;
+    left: 0px;
+    left: 0%;
+    width: 90%;
+    left: 10%;
 }
 
 
@@ -116,6 +127,25 @@ div{
 
 .carousel-demo{
     outline: none;
+}
+
+.main p,h1{
+    color: #fff;
+}
+
+.main p{
+    width: 70%;
+}
+
+.main svg{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 00px;
+    left: 10px;
+    transform: scale(1.3);
+    top: 150px;
+    left: 300px;
 }
 
 i{
@@ -129,6 +159,9 @@ i{
 
 .main p{
     font-size: 1.4em;
+    width: 100%;
+    left: -40px;
+    white-space: pre-wrap;
 }
 
 .main p,span,button{
@@ -149,6 +182,8 @@ i{
     height: 100%;
     position: fixed;
     z-index: 200;
+    left: 0px;
+    top: 0px;
 }
 
 .video_container video::after{
@@ -292,6 +327,15 @@ i{
         margin-left: 0px;
     }
 
+    .main p{
+        width: 99vw;
+    }
+
+    .main svg{
+        top: 164px;
+        left: 220px;
+    }
+
     .produtos{
         width: 100%;
         padding: 10px;
@@ -336,6 +380,7 @@ i{
         padding: 1em;
         font-size: 18px;
         top: -2em;
+        left: 1vw;
     }
 
     .destaque .produtos{
