@@ -8,6 +8,10 @@
     margin: 0px;
 }
 
+body,html{
+    overflow: hidden;
+}
+
 ::-webkit-scrollbar {
     width: 14px;
     z-index: 10000;
@@ -37,10 +41,6 @@
    background-color: transparent;
 }
 
-body,html{
-    overflow: auto;
-}
-
 header{
     background: #3F51B5;
     padding: 10px;
@@ -61,7 +61,7 @@ a:hover{
 
 header a{
     font-size: 2em;
-    margin-left: 10px;
+    margin-left: 30px;
     transition: 0.4s ease-in-out;
 }
 
@@ -80,13 +80,13 @@ h1{
 }
 
 .main{
-    position: relative;
+    position: fixed;
     top: 90px;
     padding: 20px;
     width: 100%;
-    height: auto;
-    overflow: auto;
-    height: 700px;
+    overflow-x: hidden;
+    height: 100%;
+    overflow-y: auto !important;
 }
 
 .main h1,p{
@@ -109,15 +109,6 @@ h1{
     animation: main_animate 1s ease-out;
 }
 
-@media screen and (max-width: 520px){
-    .main img{
-        margin-left: 0px;
-    }
-
-    .video_container video{
-        transform: scale(3);
-    }
-}
 
 div{
     outline: none;
@@ -176,4 +167,177 @@ i{
     top: 0px;
     left: 0px;
     z-index: 300;
+}
+
+.destaque{
+    width: 100%;
+    height: 33em;
+    background: #151515;
+    position: absolute;
+    left: 0px;
+    top: 40px;
+}
+
+.destaque h1{
+    padding: 3em;
+    color: #fff;
+    font-weight: bold;
+    color: #FFC03A;
+    font-size: 42px;
+    width: 500px;
+}
+
+.destaque p{
+    color: #fff;
+    padding: 5.5em;
+    position: relative;
+    top: -11em;
+    width: 70vw;
+    font-size: 19px;
+}
+
+.destaque .produtos{
+    width: 100%;
+    height: auto;
+    background: rgba(0,0,0,.40);
+    top: -15em;
+    position: relative;
+    float: right;
+    right: 0px;
+    border-radius: 10px;
+}
+
+.product{
+    width: 250px;
+    height: 250px;
+    display: inline-block;
+    margin-top: 20px;
+    top: -120px;
+    position: relative;
+    padding: 10px;
+    margin-left: 10px;
+    z-index: 100;
+}
+
+.product h1{
+    font-size: 13px;
+    position: absolute;
+    bottom: 0px;
+    left: 20px;
+    color: #fff;
+    text-shadow: 1px 2px 1px rgba(0,0,0,.40);
+}
+
+.product .price{
+    font-size: 13px;
+    position: absolute;
+    bottom: -20px;
+    left: 25px;
+    color: #fff;
+    text-shadow: 1px 2px 1px rgba(0,0,0,.40);
+}
+
+.product img{
+    width: 100%;
+    box-shadow: 2px 1px 3px rgba(0,0,0,.60);
+    height: 100%;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.view{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: rgba(0,0,0,.90);
+    left: 0px;
+    top: 0px;
+    z-index: 2000;
+    color: #fff;
+}
+
+.view h1{
+    position: relative;
+    padding: 0px;
+    top: 80px;
+    left: 10%;
+}
+
+.view button{
+    position: absolute;
+    float: right;
+    right: 10%;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: transparent;
+    z-index: 4000;
+    top: 10%;
+    font-size: 33px;
+    cursor: pointer;
+}
+
+.view img{
+    width: 90%;
+    height: 90%;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 520px){
+    .main img{
+        margin-left: 0px;
+    }
+
+    .produtos{
+        width: 100%;
+        padding: 10px;
+    }
+
+    .produtos .okay{
+        position: relative;
+        top: -50px;
+    }
+
+    .product h1{
+        padding: 0px;
+    }
+
+    .product h1{
+        bottom: 30px;
+    }
+
+    .product .price{
+        bottom: 10px;
+    }
+
+    .video_container video{
+        transform: scale(3);
+    }
+
+    header a{
+        font-size: 20px;
+    }
+
+    .destaque{
+        height: 50em;
+    }
+
+    .destaque h1{
+        padding: 1em;
+        width: 300px;
+    }
+
+    .destaque p{
+        width: 100vw;
+        padding: 1em;
+        font-size: 18px;
+        top: -2em;
+    }
+
+    .destaque .produtos{
+        top: 0px;
+    }
 }
